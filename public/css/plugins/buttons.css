@@ -2133,10 +2133,9 @@ ul.countdown li p {
 }
 #vpn {
   margin: 23px auto 30px;
-  color: rgba(18, 29, 51, 1);
+  color: rgba(18, 29, 51, 1) !important;
   cursor: pointer;
   font-size: 23px !important;
-  box-shadow: 0 2px 6px 0 rgba(255, 255, 255, 0.3) !important;
 }
 #vpn img {
   width: 27px;
