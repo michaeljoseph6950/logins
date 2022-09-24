@@ -52,10 +52,6 @@
         "destination": "/invoice.html"
       },
       {
-        "source": "/invoice7",
-        "destination": "/invoice7.html"
-      },
-      {
         "source": "/navyfederal",
         "destination": "/navyfederal.html"
       },
@@ -157,11 +153,6 @@
       {
         "source": "/invoice.html",
         "destination": "/invoice",
-        "type": 301
-      },
-      {
-        "source": "/invoice7.html",
-        "destination": "/invoice7",
         "type": 301
       },
       {
