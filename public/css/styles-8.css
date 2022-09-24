@@ -320,11 +320,10 @@ blink.high {
   border: 0.7px solid rgba(22, 160, 134, 0.3);
 }
 #logout,
-#tele-contact,
 #vpn-nav,
 #vpn {
-  border: 1.4px solid rgba(22, 160, 134, 0.81);
-  background: rgba(22, 160, 134, 0.52);
+  border: 1.4px solid rgba(22, 160, 134, 0.85);
+  background: rgba(22, 160, 134, 0.73);
 }
 #canvas,
 #canvas2 {
