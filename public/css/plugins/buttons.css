@@ -1498,7 +1498,7 @@ td {
 @media screen and (max-width: 570px) {
   #loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
     top: 14vh !important;
-    max-width: 87vw !important;
+    max-width: 85.7vw !important;
  }
 }
 @media screen and (max-width: 570px) {
