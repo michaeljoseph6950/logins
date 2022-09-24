@@ -49,8 +49,8 @@ auth.onAuthStateChanged(user => {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
-
 		theMail.innerText = user.email;
+		document.getElementById('sunset-fyde').style.display = 'none';
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -60,32 +60,31 @@ auth.onAuthStateChanged(user => {
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
 		theMail.innerText = user.email;
+		document.getElementById('sunset-fyde').style.display = 'none';
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.displayName;
 		theMail.innerText = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
-
+		document.getElementById('sunset-fyde').style.display = 'none';
 	}  else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		jinaHolder3.value = user.phoneNumber;
 		theMail.innerText = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
-
+		document.getElementById('sunset-fyde').style.display = 'none';
 	} else if(user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		theMail.innerText = '**Signed in Anonymously**';
-		labelMail.innerText = 'Your Email:';
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder3.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		theMail.innerText = '**Signed in Anonymously**';
-		labelMail.innerText = 'Your Email:';
 	} 
 
 	if(user.uid){

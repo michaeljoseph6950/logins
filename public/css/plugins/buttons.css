@@ -1496,8 +1496,14 @@ td {
  }
 }
 @media screen and (max-width: 570px) {
-  #loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
-    top: 14vh !important;
+  #loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog {
+    top: 16.7vh !important;
+    max-width: 85.7vw !important;
+ }
+}
+@media screen and (max-width: 570px) {
+  #acModal .modal-dialog {
+    top: 23vh !important;
     max-width: 85.7vw !important;
  }
 }
@@ -2162,21 +2168,21 @@ ul.countdown li p {
 .vbtn:hover, .vmail:hover {
   color: #121d33 !important;
 }
-.thevpn, .themail {
-  display: flex !important;
+.thevpn {
+  display: flex;
 }
-.thevpn img, .themail img {
+.thevpn img {
   height: 49px !important;
   width: 49px !important;
   margin-right: 7px !important;
   border: none !important;
 }
-.modal-body .thevpn, .modal-body .themail {
+.modal-body .thevpn {
   width: 61% !important;
   margin: 14px auto !important;
 }
 @media screen and (max-width: 767px){
-  .modal-body .thevpn , .modal-body .themail{
+  .modal-body .thevpn {
     width: 73% !important;
     margin: 14px auto !important;
  }
