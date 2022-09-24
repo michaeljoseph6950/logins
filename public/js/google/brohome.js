@@ -144,23 +144,13 @@ auth.onAuthStateChanged(user => {
 
 const logOut = document.getElementById('logout');
 logOut.addEventListener('click', () => {
-    if(auth.currentUser.isAnonymous) {
-		auth.currentUser.delete()
-			.then(() => {
-				window.location.assign('index');
-			})
-			.catch(error => {
-				console.error(error);
-			})
-	} else {
-		auth.signOut()
-			.then(() => {
-				window.location.assign('index');
-			})
-			.catch(error => {
-				console.error(error);
-			})
-	}
+	auth.signOut()
+		.then(() => {
+			window.location.assign('index');
+		})
+		.catch(error => {
+			console.error(error);
+		})
 })
 
 jinaHolder.addEventListener("change", () => {
