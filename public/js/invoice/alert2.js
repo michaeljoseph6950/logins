@@ -55,21 +55,6 @@ auth.onAuthStateChanged(user => {
 				i = 0;
 			}
 			return msgs[i];
-		} else if(user.isAnonymous){
-			var msgs = [`
-				${toastbitcoin} Bitcoin payment not detected
-				<hr>
-				Scan the bitcoin address and send $70 to complete the download
-				<hr>
-				Cost of getting bank logs is currently high, sorry for any inconvinience caused.
-				<hr>
-				A text file will be available for download after a successful payment
-			`];
-			i++;
-			if (i === msgs.length) {
-				i = 0;
-			}
-			return msgs[i];
 		} 
 	};
 

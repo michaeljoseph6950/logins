@@ -27,12 +27,6 @@
   border: 1.4px solid rgb(254, 242, 0) !important;
 }
 
-.anon-btn {
-  background: rgb(44, 242, 210) !important;
-}
-.anon-btn:hover {
-  border: 1.4px solid rgb(44, 242, 210) !important;
-}
 .phone-btn {
   background: rgb(150, 242, 106) !important;
 }
@@ -53,7 +47,7 @@ a:active {
   text-decoration: none;
 }
 .empty-cart, #email-invoice, 
-#phone-invoice, #anon-invoice {
+#phone-invoice {
   border: 7px solid rgba(250, 183, 2, 0.7) !important;
 }
 .thegold {
