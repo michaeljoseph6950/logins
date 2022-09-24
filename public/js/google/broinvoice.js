@@ -25,6 +25,12 @@ const theDate = document.getElementById('the-date');
 
 const labelMail = document.getElementById('label-mail');
 
+const mailField = document.getElementById('exampleInputEmail');
+const signUp = document.getElementById('signUp');
+
+const signGoogle = document.getElementById("signGoogle");
+const signYahoo = document.getElementById('signYahoo');
+
 
 if(!window.location.href.includes('ogins')){
 	if(!window.location.href.includes('5500')) {
@@ -122,6 +128,140 @@ logOut.addEventListener('click', () => {
 			})
 	}
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const sendVerificationEmail = () => {
+	auth.currentUser.sendEmailVerification()
+}
+
+const signUpFunction = () => {
+	event.preventDefault();
+	const email = mailField.value;
+	var actionCodeSettings = {
+		url: 'https://www.logins.id/invoice',
+		handleCodeInApp: true,
+	};
+	if(email.includes('@gmail.com')) {
+		const googleProvider = new firebase.auth.GoogleAuthProvider;
+		auth.signInWithPopup(googleProvider).then(() => {
+			sendVerificationEmail();
+			window.location.reload();
+		}).catch(error => {
+			alert(error.message)
+		});
+	} else if(email.includes('@yahoo.com')) {
+		const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+		auth.signInWithPopup(yahooProvider).then(() => {
+			sendVerificationEmail();
+			window.location.reload();
+		}).catch(error => {
+			alert(error.message);
+		})
+	} else {
+		auth.sendSignInLinkToEmail(email, actionCodeSettings)
+		.then(() => {
+			alert('Verification link sent to your email ' + email + " check the spam / junk folder");
+			window.localStorage.setItem('emailForSignIn', email);
+		})
+		.catch(error => {
+			alert(error.message);
+		});
+	}
+}
+signUp.addEventListener('click', signUpFunction);
+document.getElementById('the-form').addEventListener('submit', signUpFunction);
+
+const signInWithGoogle = () => {
+	const googleProvider = new firebase.auth.GoogleAuthProvider;
+	auth.signInWithPopup(googleProvider).then(() => {
+		sendVerificationEmail();
+		window.location.reload();
+	}).catch(error => {
+		alert(error.message)
+	});
+};
+signGoogle.addEventListener("click", signInWithGoogle);
+
+const signInWithYahoo = () => {
+	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+	auth.signInWithPopup(yahooProvider).then(() => {
+		sendVerificationEmail();
+		window.location.reload();
+	}).catch(error => {
+		alert(error.message);
+	})
+}
+signYahoo.addEventListener("click", signInWithYahoo);
+
+if (auth.isSignInWithEmailLink(window.location.href)) {
+	var email = window.localStorage.getItem('emailForSignIn');
+	if (!email) {
+		localStorage.setItem('the-email', true)
+		email = window.prompt('Enter your email for confirmation');
+	}
+	auth.signInWithEmailLink(email, window.location.href)
+		.then((result) => {
+			if (localStorage.getItem('the-email')) {
+				sendVerificationEmail();
+				window.location.reload();
+			} else {
+				alert('Return to previous tab, email has been confirmed');
+				sendVerificationEmail();
+				window.close();
+			}
+		})
+		.catch((error) => {
+			console.log('Wrong email entered')
+		});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

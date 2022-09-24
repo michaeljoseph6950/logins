@@ -1873,10 +1873,18 @@ td {
   box-shadow:  0 1px 3px 0 #121d33 !important;
   border-radius: 0 !important;
 }
-#the-date, #the-ip, #the-id {
+#the-id {
+  font-size: 17px !important;
+}
+#the-mail {
+  font-size: 18px !important;
+  width: 92% !important;
+}
+#the-date, #the-ip, #the-id, #the-mail {
   white-space: nowrap !important;
   overflow-x: scroll !important;
 }
+#the-mail::-webkit-scrollbar,
 #the-date::-webkit-scrollbar, 
 #the-ip::-webkit-scrollbar,
 #the-id::-webkit-scrollbar {
@@ -1916,7 +1924,7 @@ td {
   top: 21%;
   left: 27%;
   right: 27%;
-  opacity: 0.7 !important;
+  opacity: 0.85 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
