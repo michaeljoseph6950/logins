@@ -1500,6 +1500,10 @@ td {
     top: 14vh !important;
     max-width: 87vw !important;
  }
+ #acModal .modal-dialog {
+  top: 14vh !important;
+  max-width: 83vw !important;
+ }
 }
 @media screen and (max-width: 570px) {
   #logsModal .modal-dialog,
@@ -1885,10 +1889,11 @@ td {
 #the-mail {
   font-size: 19px !important;
 }
-#the-date, #the-ip, #the-id {
+#the-date, #the-ip, #the-id, #the-mail {
   white-space: nowrap !important;
   overflow-x: scroll !important;
 }
+#the-mail::-webkit-scrollbar,
 #the-date::-webkit-scrollbar, 
 #the-ip::-webkit-scrollbar,
 #the-id::-webkit-scrollbar {
