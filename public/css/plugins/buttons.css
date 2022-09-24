@@ -1507,6 +1507,12 @@ td {
     max-width: 98vw !important;
  }
 }
+@media screen and (min-width: 1025px) {
+  #acModal .modal-content {
+    max-width: 30vw !important;
+  }
+}
+
 .jina-div {
   display: grid;
 }
