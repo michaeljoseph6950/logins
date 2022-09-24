@@ -89,14 +89,14 @@ auth.onAuthStateChanged(user => {
 		jinaHolder3.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
-		theMail.innerText = '**Logged in Anonymously**';
+		theMail.innerText = '**Signed in Anonymously**';
 		labelMail.innerText = 'Your Email:';
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder3.value = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 
-		theMail.innerText = '**Logged in Anonymously**';
+		theMail.innerText = '**Signed in Anonymously**';
 		labelMail.innerText = 'Your Email:';
 	} 
 

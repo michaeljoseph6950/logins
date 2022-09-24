@@ -141,7 +141,7 @@ auth.onAuthStateChanged(user => {
 			The bank log files will be in text format. 
 		`;
 
-		theMail.innerText = '**Logged in Anonymously**';
+		theMail.innerText = '**Signed in Anonymously**';
 		labelMail.innerText = 'Your Email:';
 
 	}
