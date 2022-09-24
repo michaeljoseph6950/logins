@@ -20,24 +20,8 @@
         "destination": "/chase.html"
       },
       {
-        "source": "/barclays",
-        "destination": "/barclays.html"
-      },
-      {
         "source": "/bitcoin70",
         "destination": "/bitcoin70.html"
-      },
-      {
-        "source": "/m&t",
-        "destination": "/m&t.html"
-      },
-      {
-        "source": "/rbc",
-        "destination": "/rbc.html"
-      },
-      {
-        "source": "/scotia",
-        "destination": "/scotia.html"
       },
       {
         "source": "/chime",
@@ -141,28 +125,8 @@
         "type": 301
       },
       {
-        "source": "/barclays.html",
-        "destination": "/barclays",
-        "type": 301
-      },
-      {
         "source": "/bitcoin70.html",
         "destination": "/bitcoin70",
-        "type": 301
-      },
-      {
-        "source": "/m&t.html",
-        "destination": "/m&t",
-        "type": 301
-      },
-      {
-        "source": "/rbc.html",
-        "destination": "/rbc",
-        "type": 301
-      },
-      {
-        "source": "/scotia.html",
-        "destination": "/scotia",
         "type": 301
       },
       {
