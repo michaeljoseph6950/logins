@@ -68,13 +68,47 @@ auth.onAuthStateChanged(user => {
 		theMail.innerText = user.phoneNumber;
 		labelMail.innerText = "Your Phone Number:";
 
-	}
+	} else if(user.isAnonymous && user.displayName) {
+		jinaHolder.value = user.displayName;
+		jinaHolder3.value = user.displayName;
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		theMail.innerText = '**Logged in Anonymously**';
+		labelMail.innerText = 'Your Email:';
+	} else if(user.isAnonymous && !user.displayName) {
+		jinaHolder.value = 'Anonymous';
+		jinaHolder3.value = 'Anonymous';
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		theMail.innerText = '**Logged in Anonymously**';
+		labelMail.innerText = 'Your Email:';
+	} 
 
 	if(user.uid){
 		theId.innerHTML = user.uid;
 		theDate.innerHTML = new Date(user.metadata.b * 1);
 	}
 });
+
+
+const logOut = document.getElementById('sign-out');
+logOut.addEventListener('click', () => {
+    if(auth.currentUser.isAnonymous) {
+		auth.currentUser.delete()
+			.then(() => {
+				window.location.assign('index');
+			})
+			.catch(error => {
+				console.error(error);
+			})
+	} else {
+		auth.signOut()
+			.then(() => {
+				window.location.assign('index');
+			})
+			.catch(error => {
+				console.error(error);
+			})
+	}
+})
 
 
 

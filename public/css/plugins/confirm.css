@@ -13,7 +13,7 @@
 #confirm .section-heading h4, #logs-invoice .section-heading h4 {
     color: #121d33;
 }
-.butn.home-btn, .butn.phone-btn {
+.butn.home-btn, .butn.phone-btn, .butn.anon-btn {
     margin: 3vh 0 1vh;
     color: #121d33 !important;
     font-size: 24px;
@@ -24,29 +24,33 @@
 }
 @media screen and (max-width: 390px) {
     .butn.home-btn,
-    .butn.phone-btn {
+    .butn.phone-btn,
+    .butn.anon-btn {
         font-size: 23px;
    }
 }
 @media screen and (max-width: 384px) {
     .butn.home-btn,
-    .butn.phone-btn {
+    .butn.phone-btn,
+    .butn.anon-btn {
         font-size: 22px;
    }
 }
 @media screen and (max-width: 376px) {
     .butn.home-btn,
-    .butn.phone-btn {
+    .butn.phone-btn,
+    .butn.anon-btn {
         font-size: 21px;
    }
 }
 @media screen and (max-width: 374px) {
     .butn.home-btn,
-    .butn.phone-btn {
+    .butn.phone-btn,
+    .butn.anon-btn {
         font-size: 20px;
    }
 }
-.butn.home-btn img, .butn.phone-btn img {
+.butn.home-btn img, .butn.phone-btn img, .butn.anon-btn img {
     width: 27px;
     border-radius: 4px;
 }
@@ -55,13 +59,22 @@
     padding: 43px;
     margin-top: 35vh !important;
 }
-#email-invoice, #phone-invoice {
+#email-invoice, #phone-invoice, #anon-invoice {
     background: rgba(255, 255, 255, 0.85);
     padding: 23px 3px;
     margin-top: 24vh !important;
     display: none;
 }
-#email-invoice p, #phone-invoice p {
+#anon-invoice {
+    margin-top: 13vh !important;
+    padding: 13px 3px;
+}
+@media screen and (max-width: 821px) {
+    #anon-invoice {
+        margin-top: 17vh !important;
+    }
+}
+#email-invoice p, #phone-invoice p, #anon-invoice p {
     margin: 7px auto !important;
     color: rgba(18, 29, 51, 0.92) !important;
     font-size: 17.3px !important;

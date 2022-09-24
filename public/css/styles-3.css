@@ -26,6 +26,13 @@
 .home-btn:hover {
   border: 1.4px solid rgb(210, 230, 31) !important;
 }
+
+.anon-btn {
+  background: rgb(0, 230, 241) !important;
+}
+.anon-btn:hover {
+  border: 1.4px solid rgb(0, 230, 241) !important;
+}
 .phone-btn {
   background: rgb(105, 230, 136) !important;
 }
@@ -47,7 +54,7 @@ a:active {
   text-decoration: none;
 }
 .empty-cart, #email-invoice, 
-#phone-invoice {
+#phone-invoice, #anon-invoice {
   border: 7px solid rgba(0, 115, 173, 0.7) !important;
 }
 .thegold {
@@ -259,7 +266,7 @@ blink.high {
   background-color: rgba(0, 115, 173, 1);
 }
 .scroll-down,
-#best-vpns,
+#more-actions,
 #showtoasts,
 #thetot1, 
 .money,
